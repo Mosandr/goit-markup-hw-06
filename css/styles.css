@@ -65,11 +65,12 @@ body {
 
 /* =============== HEADER ===================== */
 .header {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   width: 1600px;
   background: var(--card-bg);
-  z-index: 1;
+  z-index: 1; */
+  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -504,11 +505,12 @@ body {
   margin-left: 85px;
 }
 
-.footer-social-links > p {
+.footer-social-links > p,
+.subscribe-form > p {
   margin-top: 0px;
   margin-bottom: 20px;
   color: var(--title-dark-theme-color);
-  font-family: var(--secondary-font);
+  font-family: var(--main-font);
   font-weight: bold;
   font-size: 14px;
   line-height: 1.143;
@@ -537,6 +539,55 @@ body {
 .footer-social-link > svg {
   align-self: center;
   fill: var(--title-dark-theme-color);
+}
+
+.subscribe-form {
+  margin-left: auto;
+}
+
+.subscribe-form input {
+  width: 358px;
+  height: 50px;
+  padding: 15px;
+
+  color: var(--title-dark-theme-color);
+
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe-form input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--title-dark-theme-color-alpha);
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 200px;
+  padding: 10px 28px;
+  background-color: var(--accent-color);
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--title-dark-theme-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+}
+
+.subscribe-btn > svg {
+  margin-left: 10px;
+  fill: var(--card-bg);
 }
 
 /* =============== END FOOTER ===================== */
@@ -759,7 +810,7 @@ body {
   border-radius: 2px;
 
   position: absolute;
-  bottom: 0%;
+  bottom: -1px;
 
   background: var(--accent-color);
 }
